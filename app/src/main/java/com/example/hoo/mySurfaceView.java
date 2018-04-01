@@ -17,7 +17,7 @@ public class mySurfaceView extends SurfaceView implements SurfaceHolder.Callback
     private Scribbler scr;
     private int color_idx;
 
-    mySurfaceView(Context context) throws InterruptedException {
+    public mySurfaceView(Context context) throws InterruptedException {
         super(context);
         init();
     }

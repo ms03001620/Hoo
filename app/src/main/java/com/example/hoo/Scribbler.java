@@ -18,7 +18,6 @@ public class Scribbler {
     private SurfaceHolder mHolder;
     private Paint paint;
     public static long initial_time;
-    private long draw_time;
 
     public Scribbler(SurfaceHolder holder) {
         mHolder = holder;
@@ -74,14 +73,13 @@ public class Scribbler {
 
         while (it.hasNext()) {
             po = it.next();
-            draw_time = po.m_timeSpan;
             if (k == 0) {
                 base_time = System.currentTimeMillis();
             }
             k++;
             do {
                 curr_time = System.currentTimeMillis() - base_time;
-            } while (curr_time < draw_time);
+            } while (curr_time < po.m_timeSpan);
 
             paint_to(k);
         }
