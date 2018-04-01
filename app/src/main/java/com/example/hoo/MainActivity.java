@@ -6,11 +6,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.example.hoo.eit.mySV;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private mySurfaceView mv;
+    private mySV mv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

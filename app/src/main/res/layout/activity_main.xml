@@ -29,7 +29,7 @@
 
     </LinearLayout>
 
-    <com.example.hoo.mySurfaceView
+    <com.example.hoo.eit.mySV
         android:id="@+id/surface"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

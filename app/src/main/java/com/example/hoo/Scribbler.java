@@ -5,6 +5,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.SurfaceHolder;
 
+import com.example.hoo.eit.IScribbleColor;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -16,23 +18,15 @@ public class Scribbler {
     private ArrayList<dwPoint> poList;
     private ArrayList<Integer> colorList;
     private SurfaceHolder mHolder;
+    IScribbleColor m_sv;
     private Paint paint;
     public static long initial_time;
 
-    public Scribbler(SurfaceHolder holder) {
+    public Scribbler(SurfaceHolder holder, IScribbleColor sv) {
         mHolder = holder;
         paint = new Paint();
         poList = new ArrayList<>();
-        colorList = new ArrayList<>();
-
-        colorList.add(Color.WHITE);
-        colorList.add(Color.RED);
-        colorList.add(Color.GREEN);
-        colorList.add(Color.YELLOW);
-    }
-
-    public ArrayList<Integer> getColorList() {
-        return colorList;
+        colorList = sv.getScribbleColors();
     }
 
     public void clear() {
